@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/imageMusicShop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/person_name"
+            android:textSize="24sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="104dp">
+
+            <ImageView
+                android:id="@+id/imageViewMusicShop"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/picture" />
+
+            <TextView
+                android:id="@+id/textViewSale"
+                android:layout_width="193dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="107dp"
+                android:layout_marginEnd="93dp"
+                android:layout_marginBottom="7dp"
+                android:fontFamily="@font/abril_fatface"
+                android:paddingTop="15dp"
+                android:rotation="-20"
+                android:text="@string/sale"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textViewNameSpiner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:text="@string/select_item"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageViewMusicShop"
+            android:layout_marginBottom="-63dp"
+            android:visibility="visible" />
+
+
+        <ImageView
+            android:id="@+id/imageViewElectrikGitar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/electricguitar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewPriceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/order_price"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewPriceTitle"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/nul"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewCurence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewPriceTitle"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/textViewPrice"
+                android:text="@string/bax"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_toRightOf="@id/textViewPriceTitle"
+                android:text="@string/quantity"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonMinus"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/textViewQuantity"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="180dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/textViewCurence"
+                android:onClick="decreaseQuantity"
+                android:text="@string/minus"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/purple_700" />
+
+            <TextView
+                android:id="@+id/textViewQuantity2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewPriceTitle"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/buttonMinus"
+                android:text="@string/nul"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonPlus"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/textViewQuantity"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/textViewQuantity2"
+                android:onClick="increaseQuantity"
+                android:text="@string/plus"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/purple_700" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/ButtonAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/purple_700"
+            android:onClick="onClickAdd"
+            android:text="ADD TO CART"
+            android:textColor="#FFFFFF" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
